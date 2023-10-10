@@ -11,8 +11,6 @@ import java.util.List;
 
 public class StatisticService {
 
-
-
     public List<String> popularWorld(List<String> world, int amount) {
         return world.stream()
                 .distinct()
@@ -24,7 +22,8 @@ public class StatisticService {
     public int uniqWords(List<String> words) {
         return new HashSet<>(words).size();
     }
-    public void  save(Statistic statistic, File file) throws IOException {
+
+    public void save(Statistic statistic, File file) throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(file));
         writer.write(statistic.toString());
         writer.close();

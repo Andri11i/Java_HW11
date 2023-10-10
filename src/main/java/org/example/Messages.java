@@ -7,8 +7,6 @@ public enum Messages {
     EXIT("do you want to exit  y/n :-)?"),
     INTERNAL_ERROR("Internal error, app will be closed, bye");
 
-
-
     private final String message;
 
     Messages(String message) {
